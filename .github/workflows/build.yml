@@ -3,10 +3,10 @@ on:
     branches:
       - main
     tags:
-      - '*'
+      - "*"
 name: "Build and upload release"
 concurrency:
-  group: ${{ github.workflow }}
+  group: "${{ github.repository }}-${{ github.workflow }}"
 jobs:
   build:
     uses: baerchen201/LethalModBuilder/.github/workflows/build.yml@main
