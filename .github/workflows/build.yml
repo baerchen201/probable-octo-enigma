@@ -10,3 +10,5 @@ concurrency:
 jobs:
   build:
     uses: baerchen201/LethalModBuilder/.github/workflows/build.yml@main
+    permissions:
+      contents: write
