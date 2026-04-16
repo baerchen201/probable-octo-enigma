@@ -14,4 +14,4 @@ jobs:
     permissions:
       contents: write
     with:
-      prerelease: ${{ github.ref_type == 'tag' }}
+      prerelease: ${{ github.ref_type != 'tag' }}
