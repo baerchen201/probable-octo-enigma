@@ -4,6 +4,7 @@ on:
       - main
     tags:
       - "*"
+  workflow_dispatch:
 name: "Build and upload release"
 concurrency:
   group: "${{ github.repository }}-${{ github.workflow }}"
