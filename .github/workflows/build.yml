@@ -1,8 +1,8 @@
 on:
   push:
-    branches:
+    branches: # Continuous releases
       - main
-    tags:
+    tags: # Version releases
       - "*"
   workflow_dispatch:
 name: "Build and upload release"
@@ -13,3 +13,5 @@ jobs:
     uses: baerchen201/LethalModBuilder/.github/workflows/build.yml@main
     permissions:
       contents: write
+    with:
+      prerelease: ${{ github.ref_type == 'tag' }}
